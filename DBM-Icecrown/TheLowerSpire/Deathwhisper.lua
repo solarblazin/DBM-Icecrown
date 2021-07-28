@@ -50,6 +50,7 @@ local soundWarnSpirit				= mod:NewSound(71426)
 
 local isHunter = select(2, UnitClass("player")) == "HUNTER"
 mod:AddBoolOption("RemoveDruidBuff", false, "misc")
+mod:AddBoolOption("RemoveDruidBuffTimed", false, "misc")
 mod:AddBoolOption("SetIconOnDominateMind", true)
 mod:AddBoolOption("SetIconOnDeformedFanatic", true)
 mod:AddBoolOption("SetIconOnEmpoweredAdherent", true)
@@ -175,7 +176,7 @@ function mod:OnCombatStart(delay)
 	self:Schedule(7, addsTimer, self)
 	if not self:IsDifficulty("normal10") then
 		timerDominateMindCD:Start(30)		-- Sometimes 1 fails at the start, then the next will be applied 70 secs after start ?? :S
-		if self.Options.RemoveDruidBuff then  -- Edit to automaticly remove Mark/Gift of the Wild on entering combat
+		if self.Options.RemoveDruidBuffTimed then  -- Edit to automaticly remove Mark/Gift of the Wild on entering combat
 			self:ScheduleMethod(24, "RemoveBuffs")
 		end
 		if self.Options.EqUneqWeapons and not self:IsTank() and self.Options.EqUneqTimer then
@@ -245,6 +246,11 @@ function mod:SPELL_CAST_SUCCESS(args)
 			self:UnW()
 			self:ScheduleMethod(0.01, "UnW")
 			DBM:Debug("Unequipping",2)
+		end
+		if self.Options.RemoveDruidBuff and args.destName == UnitName("player") then
+			self:RemoveBuffs()
+			self:RemoveBuffs()
+			self:ScheduleMethod(0.01, "RemoveBuffs")
 		end
 	end
 end

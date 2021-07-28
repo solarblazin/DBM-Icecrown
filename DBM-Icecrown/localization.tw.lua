@@ -121,7 +121,8 @@ L:SetOptionLocalization{
 	WeaponsStatus				= "Special warning at combat start if unequip/equip function is enabled", --Needs Translating
 	ShieldHealthFrame			= "為$spell:70842顯示首領血量框架",
 	SoundWarnCountingMC			= "Play a 5 second audio countdown for Mind Control", --Needs Translating
-	RemoveDruidBuff				= "Remove MotW / GotW 24 seconds into the fight", --Needs Translating
+	RemoveDruidBuffTimed		= "Remove MotW / GotW 24 seconds into the fight", --Needs Translating
+	RemoveDruidBuff				= "Remove MotW / GotW if MC is cast on you.", --Needs Translating
 	EqUneqWeapons				= "Unequip/equip weapons if MC is cast on you. For equipping to work, create an equipment set called 'pve'.", --Needs Translating
 	EqUneqTimer					= "Remove weapons by timer ALWAYS, not on cast (if ping is high). The option above must be enabled.", --Needs Translating
 	BlockWeapons				= "Completely block the unequip/equip functions above" --Needs Translating

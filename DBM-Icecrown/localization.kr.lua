@@ -122,6 +122,7 @@ L:SetOptionLocalization{
 	ShieldHealthFrame			= "$spell:70842의 방어막 바와 보스 체력바를 함께 보기",
 	SoundWarnCountingMC			= "Play a 5 second audio countdown for Mind Control", --Needs Translating
 	RemoveDruidBuff				= "Remove MotW / GotW 24 seconds into the fight", --Needs Translating
+	RemoveDruidBuff				= "Remove MotW / GotW if MC is cast on you.", --Needs Translating
 	EqUneqWeapons				= "Unequip/equip weapons if MC is cast on you. For equipping to work, create an equipment set called 'pve'.", --Needs Translating
 	EqUneqTimer					= "Remove weapons by timer ALWAYS, not on cast (if ping is high). The option above must be enabled.", --Needs Translating
 	BlockWeapons				= "Completely block the unequip/equip functions above" --Needs Translating

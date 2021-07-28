@@ -139,7 +139,8 @@ L:SetOptionLocalization{
 	SetIconOnDeformedFanatic	= DBM_CORE_L.AUTO_ICONS_OPTION_TEXT:format(70900),
 	SetIconOnEmpoweredAdherent	= DBM_CORE_L.AUTO_ICONS_OPTION_TEXT:format(70901),
 	SoundWarnCountingMC			= "Play a 5 second audio countdown for Mind Control",
-	RemoveDruidBuff				= "Remove MotW / GotW 24 seconds into the fight",
+	RemoveDruidBuffTimed		= "Remove MotW / GotW 24 seconds into the fight",
+	RemoveDruidBuff				= "Remove MotW / GotW if MC is cast on you.",
 	EqUneqWeapons				= "Unequip/equip weapons if MC is cast on you. For equipping to work, create an equipment set called 'pve'.",
 	EqUneqTimer					= "Remove weapons by timer ALWAYS, not on cast (if ping is high). The option above must be enabled.",
 	BlockWeapons				= "Completely block the unequip/equip functions above"
